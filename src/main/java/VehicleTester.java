@@ -2,7 +2,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 import controller.VehicleHelper;
-import model.Owner;
 import model.Vehicle;
 
 /**
