@@ -1,8 +1,9 @@
 import java.time.LocalDate;
 import java.util.List;
 
-import controller.VehicleHelper;
 import model.Vehicle;
+import model.Owner;
+//import controller.VehicleHelper;
 
 
 /**
@@ -23,17 +24,17 @@ public class VehicleTester {
 		Vehicle redTruck = new Vehicle(janeSmith, today, "Truck", "Red");
 		Vehicle blackCar = new Vehicle(johnDoe, yesterday, "Car", "Black");
 		
-		VehicleHelper vh = new VehicleHelper();
-		
-		vh.insertNewVehicle(redTruck);
-		vh.insertNewVehicle(blackCar);
-		
-		List<Vehicle> allVehicles = vh.showAllVehicles();
-		
-		for (Vehicle v: allVehicles) {
-			System.out.println(v.toString());
-		}
-		
+//		VehicleHelper vh = new VehicleHelper();
+//		
+//		vh.insertNewVehicle(redTruck);
+//		vh.insertNewVehicle(blackCar);
+//		
+//		List<Vehicle> allVehicles = vh.showAllVehicles();
+//		
+//		for (Vehicle v: allVehicles) {
+//			System.out.println(v.toString());
+//		}
+//		
 	}
 
 }
