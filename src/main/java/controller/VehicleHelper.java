@@ -12,11 +12,11 @@ import model.Vehicle;
 /**
  * @author Tony Ehlert - aehlert
  * CIS175 - Fall 2022
- * Oct 3, 2022
+ * Oct 8, 2022
  */
 public class VehicleHelper {
 
-	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("TestOwnerVehiclePP");
+	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("OwnerVehiclePP");
 	
 	public void insertNewVehicle(Vehicle v) {
 		EntityManager em = emfactory.createEntityManager();
