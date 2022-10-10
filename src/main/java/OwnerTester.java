@@ -1,7 +1,10 @@
+import java.time.LocalDate;
 import java.util.List;
 
 import controller.OwnerHelper;
+import controller.VehicleHelper;
 import model.Owner;
+import model.Vehicle;
 
 /**
  * @author alexh - aheinrichs
@@ -42,6 +45,27 @@ public class OwnerTester {
 		for(Owner o: allOwners) {
 			System.out.println(o.toString());
 		}
+		
+		System.out.println("Temp test");
+		//printing out string of list of vehicles connected to owner object
+		
+		LocalDate today = LocalDate.now();
+		LocalDate yesterday = LocalDate.of(2022, 10, 6);
+		
+		Vehicle redTruck = new Vehicle(vivian, today, "Truck", "Red");
+		Vehicle blackCar = new Vehicle(vivian, yesterday, "Car", "Black");
+		VehicleHelper vh = new VehicleHelper();
+		
+		vh.insertNewVehicle(redTruck);
+		vh.insertNewVehicle(blackCar);
+		
+		allOwners = oh.showAllOwners();
+		for(Owner o: allOwners) {
+			for(Vehicle v: o.getListOfVehicles()) {
+				System.out.println(v.getColor());
+			}
+		}
+		
 	}
 
 }

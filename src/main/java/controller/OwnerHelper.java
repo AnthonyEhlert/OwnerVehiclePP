@@ -40,17 +40,12 @@ public class OwnerHelper {
 	public void deleteOwner(Owner toDelete) {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
-		TypedQuery<Owner> typedQuery = em.createQuery("select ow from Owner ow where ow.firstName = :selectedFirstName and ow.lastName = :selectedLastName", Owner.class);
-		
-		//Substitute parameter with actual data from the toDelete item
-		typedQuery.setParameter("selectedFirstName", toDelete.getFirstName());
-		typedQuery.setParameter("selectedLastName", toDelete.getLastName());
 		
 		//Code to select an owner to delete based off of the id parameter
-//		TypedQuery<Owner> typedQuery = em.createQuery("SELECT ow FROM Owner ow WHERE ow.id = :selectedId", Owner.class);
-//		
-//		//Substitute parameter with actual data from the toDelete owner
-//		typedQuery.setParameter("selectedId", toDelete.getId());
+		TypedQuery<Owner> typedQuery = em.createQuery("SELECT ow FROM Owner ow WHERE ow.id = :selectedId", Owner.class);
+		
+		//Substitute parameter with actual data from the toDelete owner
+		typedQuery.setParameter("selectedId", toDelete.getId());
 		
 		//we only want one result
 		typedQuery.setMaxResults(1);
