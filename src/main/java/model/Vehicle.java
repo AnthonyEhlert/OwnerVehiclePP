@@ -24,7 +24,7 @@ public class Vehicle {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@ManyToOne(cascade= {CascadeType.PERSIST})
+	@ManyToOne(cascade= {CascadeType.MERGE})
 	private Owner owner;
 	
 	private LocalDate dateOfPurchase;
