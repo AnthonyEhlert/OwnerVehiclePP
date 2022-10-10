@@ -28,7 +28,7 @@ public class Owner {
 	private String firstName;
 	private String lastName;
 
-	@OneToMany(cascade=CascadeType.MERGE, fetch=FetchType.EAGER)
+	@OneToMany(mappedBy = "owner", cascade= {CascadeType.MERGE}, fetch=FetchType.EAGER)
 	private List<Vehicle> listOfVehicles;
 	
 	public Owner() {
