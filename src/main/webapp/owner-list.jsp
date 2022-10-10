@@ -25,7 +25,12 @@
 		<td>${owner.id}</td>
 		<td>${owner.firstName}</td>
 		<td>${owner.lastName}</td>
-		<td>${owner.listOfVehicles}</td>
+		<td align = "center"><c:forEach items="${owner.listOfVehicles}" var="vehicle">
+		          ${vehicle.type}, 
+		          ${vehicle.color}, 
+		          ${vehicle.dateOfPurchase}:  
+		      </c:forEach> 
+		</td>
 	</tr>
 	</c:forEach>
 </table><br/>
