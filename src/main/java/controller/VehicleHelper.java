@@ -29,6 +29,7 @@ public class VehicleHelper {
 	public List<Vehicle> showAllVehicles() {
 		EntityManager em = emfactory.createEntityManager();
 		List<Vehicle> allVehicles = em.createQuery("SELECT v FROM Vehicle v").getResultList();
+		em.close();
 		return allVehicles;
 	}
 	
