@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.eclipse.persistence.annotations.Noncacheable;
+
 /**
  * @author alexh - aheinrichs
  * CIS175 - Fall 2022
@@ -28,6 +30,7 @@ public class Owner {
 	private String firstName;
 	private String lastName;
 
+	@Noncacheable
 	@OneToMany(mappedBy = "owner", cascade= {CascadeType.MERGE}, fetch=FetchType.EAGER)
 	private List<Vehicle> listOfVehicles;
 	
