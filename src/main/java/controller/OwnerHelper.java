@@ -8,7 +8,6 @@ import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 import model.Owner;
-import model.Vehicle;
 
 /**
  * @author alexh - aheinrichs
@@ -74,36 +73,6 @@ public class OwnerHelper {
 		Owner found = em.find(Owner.class, idToEdit);
 		em.close();
 		return found;
-	}
-	
-	public List<Owner> searchForOwnerByFirstName(String firstName) {
-		EntityManager em = emfactory.createEntityManager();
-		em.getTransaction().begin();
-		TypedQuery<Owner> typedQuery = em.createQuery("select li from Owner li where li.firstName = :selectedFirstName", Owner.class);
-		typedQuery.setParameter("selectedFirstName", firstName);
-		List<Owner> foundOwners = typedQuery.getResultList();
-		em.close();
-		return foundOwners;
-	}
-	
-	public List<Owner> searchForOwnerByLastName(String lastName) {
-		EntityManager em = emfactory.createEntityManager();
-		em.getTransaction().begin();
-		TypedQuery<Owner> typedQuery = em.createQuery("select li from Owner li where li.lastName = :selectedLastName", Owner.class);
-		typedQuery.setParameter("selectedLastName", lastName);
-		List<Owner> foundOwners = typedQuery.getResultList();
-		em.close();
-		return foundOwners;
-	}
-	
-	public List<Owner> searchForOwnerByListOfVehicles(List<Vehicle> listOfVehicles) {
-		EntityManager em = emfactory.createEntityManager();
-		em.getTransaction().begin();
-		TypedQuery<Owner> typedQuery = em.createQuery("select li from Owner li where li.listOfVehicles = :selectedListOfVehicles", Owner.class);
-		typedQuery.setParameter("selectedListOfVehicles", listOfVehicles);
-		List<Owner> foundOwners = typedQuery.getResultList();
-		em.close();
-		return foundOwners;
 	}
 	
 	//clean up

@@ -6,6 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Edit Owner</title>
+<link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
 <h1>Editing owner ${ownerToEdit.firstName} ${ownerToEdit.lastName}</h1>

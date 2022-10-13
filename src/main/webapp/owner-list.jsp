@@ -6,6 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Owners List</title>
+<link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
 
@@ -14,7 +15,6 @@
 <table>
 	<tr>
 		<th></th>
-		<th>ID</th>
 		<th>First Name</th>
 		<th>Last Name</th>
 		<th>List of Vehicles</th>
@@ -22,13 +22,12 @@
 	<c:forEach items="${requestScope.allOwners}" var="owner">
 	<tr>
 		<td><input type = "radio" name = "id" value = "${owner.id}"></td>
-		<td>${owner.id}</td>
 		<td>${owner.firstName}</td>
 		<td>${owner.lastName}</td>
 		<td align = "center"><c:forEach items="${owner.listOfVehicles}" var="vehicle">
-		          ${vehicle.type}, 
-		          ${vehicle.color}, 
-		          ${vehicle.dateOfPurchase}:  
+			<table>
+		          <tr>${vehicle.type}, ${vehicle.color}, ${vehicle.dateOfPurchase}</tr>
+			</table>
 		      </c:forEach> 
 		</td>
 	</tr>
@@ -38,7 +37,8 @@
 <input type = "submit" value = "delete" name = "doThisToOwner">
 <input type = "submit" value = "add" name = "doThisToOwner">
 </form>
-<a href = "index.html">Main Menu</a><br />
-<a href = "viewAllVehiclesServlet">View the complete list of vehicles</a><br />
+<br><br>
+<a href = "index.html">Main Menu</a><br>
+<a href = "viewAllVehiclesServlet">View the complete list of vehicles</a><br>
 </body>
 </html>
