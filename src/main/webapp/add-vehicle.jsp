@@ -13,6 +13,7 @@
 </style>
 <meta charset="UTF-8">
 <title>Add New Vehicle</title>
+<link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
     <h1>List of Owners</h1>
@@ -36,8 +37,8 @@
     Color: <input type = "text" name = "color"><br><br><br>
     <input type = "submit" value = "add" name = "insertVehicle"><br/><br/>
     </form>
-    <a href = "viewAllOwnersServlet">View the complete list of owners </a><br /><br />
-    <a href = "viewAllVehiclesServlet">View the complete list of vehicles</a><br /><br /><br /><br />
-    <a href = "index.html">Main Menu</a><br />
+    <a href = "viewAllOwnersServlet">View the complete list of owners </a><br><br>
+	<a href = "viewAllVehiclesServlet">View the complete list of vehicles</a><br><br><br><br>
+	<a href = "index.html">Main Menu</a><br>
 </body>
 </html>

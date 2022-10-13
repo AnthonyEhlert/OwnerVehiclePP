@@ -13,6 +13,7 @@
 </style>
 <meta charset="UTF-8">
 <title>Vehicles List</title>
+<link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
     <h1>List of Vehicles</h1>

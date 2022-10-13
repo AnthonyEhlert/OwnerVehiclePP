@@ -37,7 +37,8 @@
 <input type = "submit" value = "delete" name = "doThisToOwner">
 <input type = "submit" value = "add" name = "doThisToOwner">
 </form>
-<a href = "index.html">Main Menu</a><br />
-<a href = "viewAllVehiclesServlet">View the complete list of vehicles</a><br />
+<br><br>
+<a href = "index.html">Main Menu</a><br>
+<a href = "viewAllVehiclesServlet">View the complete list of vehicles</a><br>
 </body>
 </html>

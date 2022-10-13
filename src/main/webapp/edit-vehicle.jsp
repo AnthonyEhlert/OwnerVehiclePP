@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Vehicle Edit</title>
+<link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
     <h1>Please Edit Any Necessary Info, then Click "Save Vehicle</h1>
